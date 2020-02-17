@@ -48,6 +48,17 @@ public class Datenmanager {
      * @param t
      */
     public void insertionSort(Token[] t){
+        Token tmp;
+        for(int i = 0;i<t.length;i++){
+            tmp = t[i];
+            int j = i;
+            while(j>0 && t[j-1].getPrimaryKey()>tmp.getPrimaryKey()){
+                t[j] = t[j-1];
+                j--;
+            }
+            t[j]= tmp;
+        }
+
         //todo Implementieren. Hilfestellungen finden sich im Buch und im Internet.
     }
 
